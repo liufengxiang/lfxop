@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<script src="js/jquery.js"></script>
+<!--<script>
+岳英俊	岳老大复习js	2017年2月9日 10:41:41	自我介绍...回去3分钟自我介绍
+	又快又好有多的处理代码
+	能够快速的处理复杂的逻辑
+	js 里面数据类型
+		从物理层面	null undefined	是一样的
+		null	清空对象
+		垃圾回收机制	快速清空	变量=null
+		1.初始数据类型	基本类型	面试
+		  a.	栈区	简单的类型	1000
+		  		数值	字符串 	underfined	null	boolean
+
+		2.引用类型	复杂类型
+			b.	堆区	复杂的类型
+				函数(定义)	数组() 对象()
+	javascript	有3部分组成	:ecmascript	dom	bom		(dom	bom)javascript
+						ecmascript	能操作flash	pt
+	常量	就如你的性别男或女	定义常量:const num=10;下面不能再有覆盖上面的会出错
+	变量	var 经常用的
+	运算符	+ 术语:二义性	``新版es6能下面那么写 (var str=`我的名字叫${name},我的性别是:${sex}`;)	(1.)
+		逻辑运算符(隐式的类型转换)	假的:0	null	undefined	false	NaN	(空字符串也是假的)
+	流程控制
+		3种	默认是:顺序执行
+			1.条件语句
+				if	else  块变量	(3.)(4.)
+				switch
+			2.循环语句
+				for()	已经知道他有多少个
+				for(var i in)
+				while(){}	不知道有多少个	知道他什么时候是错的	在后台会经常用
+				do{}while
+	javascript	浏览器
+				chrome	ff	ie	360
+		服务器端都可以用	nodejs
+	函数	用来重用 完成特定功能的代码
+		1.定义函数		eg:做个电脑
+		2.调用函数		eg:用电脑	事件调用
+	2017年2月9日14:42:46
+	讲10行10列开始封装(7.)
+	参数:为了使同一个函数有不同的状态;
+		可以接受任何的数据类型
+	()1.优先级	2.函数执行
+	全局变量	定义在函数最外层的变量
+	局部变量	定义在函数里面的变量
+	一·程序的安全
+	二·内存的释放
+	(function) 内部用 var 重新定义
+	程序里面的可以访问外面的  外面访问不到里面的变量之类的
+	预解析	//必须要做的工作
+		1.首先解析语法对不对,标点符号;
+		2.统筹看内存能放下吗 就是(变量	函数)
+	{
+		var a="cc";
+		console.log(a);
+		//写在前面执行对的，写在后面是undefined	找到a,所以是undefined
+	}
+	回调函数
+	数组方面
+		一系列相关信息
+		1.基础
+		2.引用
+		不要允许有三维数组的存在,(如果有三维数组,转换为二维数组)
+		var arr=[];//特殊的应用类型
+	//基础类型	传值
+	var a =10;
+	var b=a;
+	a=20;
+	console.log(b);
+	//引用类型  传地址
+	var arr=["a","b","c","d"];
+	var arr1=arr;
+	arr1.push("e");
+	console.long(arr);
+2017年2月10日 14:52:42
+1.	window.onload=functions()｛
+
+｝ 	整个页面当中所有的资源加载完
+2.	document.addEventListener("DOMContentLoaded",function () {
+		这个优于onload启动
+    })
+3.	document.querySelector("div");
+	document.querySelectorAll()		  //可以获取任务body中的任何元素，随便写
+	类数组转换成数组	divs=Array.prototype.slice.call(divs);
+						divs.forEach()	//循环数组
+</script>-->
+
+
+
+<script>
+//1.
+//	var name="刘凤翔";
+//	var	sex="男";
+//	var str=`我的名字叫${name},我的性别是:${sex}`;
+//	console.log(str);
+//2.	
+//	/
+//3.	
+	//在花括号里面起作用
+//	var num=10;
+//	if(true){
+//		//块变量只能在花括号里面起作用
+//		let	num = 10;
+//		console.log(num);
+//	}else{
+//		
+//	}
+//	console.log(num);
+//4.
+//	var i="我是外面的";
+//	for(let i=0;i<20;i++){
+//		console.log(i)
+//	}
+//	console.log(i)
+//5.s
+//	for(i=100;i<200;i++){
+//		if(i%3==1&&i%4==2&&i%5==3){
+//			console.log(i);
+//		}
+//	}
+//6.调用，函数传参
+//	function each(num,callback){
+//		for(i=0;i<num;i++){
+//			callback(i);
+//		}
+//	}
+//下面function里面参数，上面callback(i)每次调用实参，index形参
+//	each(10,function(index){
+//		console.log(index);
+//	})
+//7.十行十列的表格
+//es6 中可以这样写	:function aa(a=10,b=10)
+//	function aa(a,b){
+//		//如果不传参数输出10行10列
+//		var a=a||10;
+//		var b=b||10;
+//		//document.write 换成定义变量，最后在输出
+//		var	str="<table>"
+//		str+="<table>";
+//			for(i=0;i<a;i++){
+//				str+="<tr>";
+//				for(j=0;j<b;j++){
+//					str+="<td>"+j+"</td>";
+//				}
+//				str+="</tr>";
+//			}
+//		str+="</table>";
+//		document.write(str+"</br>");
+//	}
+//	aa(5,5);
+//	aa(6,6);
+//	aa(7,7);
+//	aa();
+//8.闭包
+//	function aa(){
+//		var num= 10;
+//		return function(){
+//			console.log(num++)
+//		}
+//	}
+//	var fn=aa();
+//	fn();
+//	fn();
+//	fn();
+//	fn();
+//	console.log(num);
+//9.数组的排序功能   函数回调然后
+//冒泡
+//选择排序
+//插入排序
+//体统自带排序
+	//冒泡排序的写法
+//	var arr=[237,459,125,26,8];
+//		function copy(arr){
+//		var  newarr=[];
+//		for(var i in arr){
+//			newarr[i]=arr[i]
+//		}
+//		return newarr;
+//		}
+//4.系统自带sort排序方法
+//$(function(){
+//    var div = $("div").width().toArray().sort(function(a,b){
+//        return parseInt($(a).width()) - parseInt($(b).width())
+//    });
+////    $(div).appendTo("html")
+//	sort()
+//})
+$(document).ready(function() {
+//var div=$("div");
+//function  sort(arr,callback) {
+//    for(var i=0;i<arr.length;i++){
+//        for(var j=i+1;j<arr.length;j++){
+//            if(callback(arr[i],arr[j])){
+//                var temp=arr[i];
+//                arr[i]=arr[j];
+//                arr[j]=temp;
+//            }
+//        }
+//    }
+//    return arr;
+//}
+//    function copy(arr){
+//        var  newarr=[];
+//        for(var i in arr){
+//            newarr[i]=arr[i]
+//        }
+//        return newarr;
+//    }
+//	console.log(sort(div,function (a,b) {
+//        return a.widths<b.widths;
+//    }))
+//	for(var i=0;i<arr.length;i++){
+//    	$(div).appendTo("html")
+//	}
+
+//正确的下面5个div的排列开始 jquery方法写的
+//var arr1=[];    //定义数组1
+//var arr2=[];	//定义数组2
+//$("div").each(function(index){		//获取下面div并用each循环
+//    arr1.push($(this));				//在末尾添加 清楚push的用法
+//    arr2.push($(this).width());		//在末尾添加div的宽度，看能获取到吗！控制台输出
+//    console.log($(this).width())
+//})
+//
+//function sort(arr,callback){	//循环冒泡
+//    var newarr=copy(arr);		//调用上面copy 复制一个新的，对原数组没有影响
+//    for(var i=0;i<newarr.length;i++){
+//        for(var j=i+1;j<newarr.length;j++){
+//            if(callback(newarr[i],newarr[j])){
+//                var  t=newarr[i];
+//                newarr[i]=newarr[j];
+//                newarr[j]=t;
+//            }
+//        }
+//    }
+//    return newarr;
+//}
+//$(document.body).append(sort(arr1,function(a,b){	//取body,然后
+//    return a.width()>b.width();
+//}))
+//var aa=sort(arr2,function(a,b){
+//    return a>b;
+//})
+//for(var i=0;i<aa.length;i++){
+//    $("div").eq(i).width(aa[i]);
+//}
+//正确的下面5个div的排列结束
+//	javascript写的这个开始 未写完
+//	var div = document.getElementsByTagName(div);
+//    var arra=[];
+//    function sort(arr,callback){
+//        var newarr=copy(arr);
+//        for(var i=0;i<newarr.length;i++){
+//            for(var j=i+1;j<newarr.length;j++){
+//                if(callback(newarr[i],newarr[j])){
+//                    var t;
+//                    t=newarr[i];
+//                    newarr[i]=newarr[j];
+//                    newarr[j]=t;
+//                }
+//            }
+//        }
+//        return newarr;
+//    }
+//    var lfx=sort(arr,function (a,b) {
+//		return a.innerHTML<b.innerHTML;
+//    })
+//	for(i=0;i<lfx.length;i++){
+//        document.body.appendChild(lfx[i])
+//	}
+//	javascript写的这个结束
+//老师教的一种新方法 写的下面div排序
+	var divs = document.querySelectorAll("div");  //用querySelector来获取元素，和css写一样
+    divs=Array.prototype.slice.call(divs);			//把获取的到元素“类”数组的转换为数组对象
+    console.log(divs)
+	divs.sort(function (a,b) {						//接下来用Js原生sort排序，传参数，比较
+		return a.clientWidth>b.clientWidth;
+    })
+	divs.forEach(function (obj,index) {				//用上面转换好的数组，用forEach循环，es6提供的新的方法
+		var width = obj.clientWidth;				//获取每个元素的宽度，控制台输出
+		console.log(width);
+		var clone = obj.cloneNode(true);			//然后克隆每个元素，如果不克隆，就会出现漏掉元素，对于下面appendChild,
+		clone.style.width=width+"px";				//添加到末尾，原数组的改变了，现在第二个元素是后面的那个元素，前面的元素到第一个了，排序自然不对
+		document.body.appendChild(clone);			//然后就是添加到末尾了
+    })
+    divs.forEach(function (obj,index){				//这个是删除元素把其中append改为
+        document.body.removeChild(obj);
+    })
+})
+
+//	width(arr,function(a,b){
+//	    return a.width()>b.width();
+//	})
+//    function sort(arr,callback){
+//		var newarr=copy(arr);
+//        for(var i=0;i<arr.length;i++){
+//            for(var j=i+1;j<arr.length;j++){
+//                if(callback(arr[i],arr[j])){
+//                    var temp=arr[i];
+//                    arr[i]=arr[j];
+//                    arr[j]=temp;
+//                }
+//            }
+//        }
+//        return arr;
+//    }
+//    console.log(sort(arr,function (a,b) {
+//        return a<b;
+//    }))
+
+
+
+//1.冒泡排序方法
+//	function order(arr,type){
+//		var type=type||"min";
+//		var newarr=copy(arr);
+//		for(var i=0;i<arr.length;i++){
+//			for(var j = i+1;j<arr.length;j++){
+//				if(type=="min"){
+//					if(arr[i]>arr[j]){
+//					var temp = arr[i];
+//					arr[i]=arr[j];
+//					arr[j]=temp;
+//					}
+//				}else if(type=="max"){
+//					if(arr[i]<arr[j]){
+//					var temp = arr[i];
+//					arr[i]=arr[j];
+//					arr[j]=temp;
+//					}
+//				}
+//
+//			}
+//		}
+//	return arr;
+//	}
+//console.log(order(arr,"max"));
+//arr.sort(function(a,b){
+//	return b-a;
+//})
+
+//2.选择排序的写法
+//	function lfx(arr){
+//		var newarr=copy(arr);
+//		var len=newarr.length;
+//		var manindex,n;
+//		for(var i=0;i<len;i++){
+//			manindex=i;
+//			for(var j=i+1;j<len;j++){
+//				if(arr[i]<arr[j]){
+//					var temp = arr[i];
+//					arr[i]=arr[j];
+//					arr[j]=temp;
+//				}
+//			}
+//
+//		}
+//		return arr;
+//	}
+//	console.log(lfx(arr))
+//3.插入排序的写法
+//function lfx(arr){
+//	var newarr=copy(arr);
+//	for(var i=1;i<newarr.length;i++){
+//		var pre=i-1;   //下标1
+//		var curr=newarr[i];  //值2
+//		while(pre>=0&&curr<newarr[pre]){
+//			newarr[pre+1]=newarr[pre];
+//			pre--;
+//		}
+//		newarr[pre+1]=curr;
+//	}
+//	return newarr;
+//}
+//console.log(lfx(arr))
+</script>
+	<style>
+		div{
+			background: pink;
+			margin: 10px 30px;
+			text-align: center;
+			color: red;
+			font-size: 20px;
+			line-height: 30px;
+		}
+		div:nth-child(1){
+			width:300px;
+			height:30px
+		}
+		div:nth-child(4){
+			width:240px;
+			height:30px
+		}
+		div:nth-child(3){
+			width:200px;
+			height:30px
+		}
+		div:nth-child(2){
+			width:150px;
+			height:30px
+		}
+		div:nth-child(5){
+			width:100px;
+			height:30px
+		}
+	</style>
+	</head>
+	<body>
+	<div>1</div>
+	<div>2</div>
+	<div>3</div>
+	<div>4</div>
+	<div>5</div>
+	</body>
+</html>

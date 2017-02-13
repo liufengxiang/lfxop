@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<scirpt src="js/jquery.js"></scirpt>
+<script>
+   // $(document).ready(function () {
+        class person{
+            constructor(){
+                this.name="aa";
+            }
+            say(){
+                alert(1);
+                return this.name;
+            }
+        }
+        console.log(new person().say());
+        class stu extends person{
+            constructor(){
+                super();
+            }
+        }
+        console.log(new stu());
+   // })
+</script>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    /* *
+    函数  数组  变量  流程控制    对象
+    1.封装代码
+    2.函数当作对象取用
+    3.函数当作类（构造函数）
+    类：现实生活中思考或者思想   对象是类的实例
+                                 类是对象的抽象
+       就是为了似现实生活中思想一样去写代码！
+        function person(){
+
+        }
+     在javascript定义函数的方式
+        1.通过构造函数(类)的方式，能够继承我们人类思考的方式
+        2. 通过json   是javascript里面独有的创建对象的方式，快速的存储和传递一些数据    散列式
+            json：是以键值对的格式
+        var  person={name:"zhangsan",age:"11"}
+        对象里面的三大特性：封装、继承、多态
+            所有的对象都要继承Object
+            没有写也既继承
+         讲原型继承  顶上是基类、父类、子类
+         stu.prototype=person.prototype  子类继承父类原型上的方法、属性
+         stu.prototype=new person   子类继承父类所有的方法、属性
+        继承的原理
+        浅拷贝
+        深拷贝
+        构造函数：当实例化类的时候，自动执行的函数叫做构造函数
+        es6 class stu extends person{
+            constructor(){
+                super();  定义一个类，继承父类，在constructor里面写一个super就继承父类中this了。
+            }
+        }
+    * */
+
+</script>
+<script>
+    /*
+    1.函数当作对象来用，目的--》形成一个命名空间
+      */
+    /*
+    var names="zhangsan"; //防止全局变量的污染
+    function aa() {
+        alert(1);
+    }
+    aa.name="zhangsan"; //name用names才行，因为有name这个方法
+    aa.age="22";
+    */
+   //2. 数组对象原型
+//    function myArray() {
+//        for(var i in arguments){
+//            this[i]=arguments[i];
+//        }
+//        this.length=arguments.length;
+//    }
+//
+//    myArray.prototype={
+//        sort:function () {
+//            var type=type||"min";
+//            for(var i=0;i<this.length;i++){
+//                for(var j = i+1;j<this.length;j++){
+//                    if(type=="min"){
+//                        if(this[i]>this[j]){
+//                            var temp = this[i];
+//                            this[i]=this[j]
+//                            this[j]=temp;
+//                        }
+//                    }else if(type=="max"){
+//                        if(this[i]<this[j]){
+//                            var temp = this[i];
+//                            this[i]=this[j]
+//                            this[j]=temp;
+//                        }
+//                    }
+//                }
+//            }
+//        return this;
+//        },
+//        getValue:function () {
+//
+//        }
+//    }
+//    var arr = new myArray(32,55,2,4,86);
+//    var arr1 = new myArray(34,35,1,6,56);
+//    console.log(arr1.sort("max"));
+    function copy(json){
+        var newobj=[];
+        for(var i in json){
+            newobj[i]=json[i];
+        }
+        return newobj;
+    }
+    var zhangsan={name:"zhangsan",age:"55",son:{name:"xiaozhangsan"}};
+    var lisi=copy(zhangsan);
+    lisi.son.name="xiaolisi";
+    console.log(zhangsan.son.zhangsan)
+</script>
+</body>
+</html>
