@@ -104,30 +104,7 @@
                 if(ot>that.ch-that.oh){that.obj.css("top",(that.ch-that.oh)+"px")};
             })
         }
-        huancun(){
-            var hl=(this.cx-this.oldl)/10;
-            var ht=(this.cy-this.oldt)/10;
-            var a=0.8;
-            var b=0.8;
-            var that=this;
-            var t=setInterval(function(){
-                hl*=a;
-                ht*=b;
-                if(hl<0.2&&hl>-0.2&&ht<0.2&&ht>-0.2){
-                    clearInterval(t);
-                }
-                that.x+=hl;
-                that.y+=ht;
-                if(that.x<0){that.x=0;};
-                if(that.y<0){that.y=0;};
-                if(that.x>that.cw-that.ow){that.x=that.cw-that.ow};
-                if(that.y>that.ch-that.oh){that.y=that.ch-that.oh};
-                that.obj.css({
-                    left:that.x+"px",
-                    top:that.y+"px"
-                });
-            },50)
-        }
+       
     }
     new drags($("div")).drag();
 </script>
