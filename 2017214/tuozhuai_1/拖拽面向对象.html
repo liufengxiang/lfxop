@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+
+
+
+        div{
+            width:100px;height:100px;
+            border:1px solid red;
+            position: absolute;
+        }
+        div:nth-child(1){
+            left:0;top:0;
+        }
+        div:nth-child(2){
+            left:0;top:100px;
+        }
+        div:nth-child(3){
+            left:0;top:200px;
+        }
+        div:nth-child(4){
+            left:0;top:300px;
+        }
+        div:nth-child(5){
+            left:0;top:400px;
+        }
+
+
+    </style>
+    <script>
+
+        class drag{
+            constructor(selector){
+                //要拖拽的元素
+                this.eles=document.querySelectorAll(selector);
+                //开始拖拽
+                this.startDrag();
+
+            }
+
+
+            startDrag(){
+
+                var that=this;
+                //循环的给每一个元素添加mousedown事件
+                for(var i=0;i<this.eles.length;i++){
+                    this.eles[i].onmousedown=function(e){
+
+                        var left=this.offsetLeft;
+                        var top=this.offsetTop;
+                        var cx=e.clientX;
+                        var cy=e.clientY;
+                        that.lenx=cx-left;
+                        that.leny=cy-top;
+                        that.move(this);
+                        that.up();
+                        e.preventDefault();
+                    }
+                }
+            }
+            move(obj){
+
+                var that=this;
+                document.onmousemove=function(e){
+                    var cx=e.clientX;
+                    var cy=e.clientY;
+                    var endx=cx-that.lenx;
+                    var endy=cy-that.leny;
+                    obj.style.left=endx+"px";
+                    obj.style.top=endy+"px";
+                    e.preventDefault();
+                }
+            }
+
+            up(){
+                document.onmouseup=function(){
+                    document.onmousemove=null;
+                    document.onmouseup=null;
+                }
+            }
+        }
+
+
+        window.onload=function() {
+            new drag("div");
+        }
+
+    </script>
+</head>
+<body>
+
+
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+
+
+
+
+</body>
+</html>
+<script>
+    1.拖拽的元素要定位  margin
+
+</script>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+.parent{
+    width: 200px;height: 200px;
+    position: relative;
+    border:1px solid pink;
+    margin: 0 auto;
+}
+.son{
+    width: 50px;height: 50px;
+    position: absolute;
+    background: lightblue;
+}
+    </style>
+    <script>
+        window.onload=function () {
+//            var parent = document.getElementsByClassName("parent")[0];
+            var son = document.getElementsByClassName("son")[0];
+            son.onmousedown=function (e) {
+                var ev =e||window.event;
+                var left=son.offsetLeft;
+                var top=son.offsetTop;
+                var ox=ev.clientX;
+                var oy=ev.clientY;
+                var endx=ox-left;
+                var endy=oy-top;
+
+                document.onmousemove=function (e) {
+                    var ev=e||window.event;
+                    var cx=ev.clientX;
+                    var cy=ev.clientY;
+                    var lefts=cx-endx;
+                    var tops=cy-endy;
+                    son.style.left=lefts+"px";
+                    son.style.top=tops+"px";
+                    e.preventDefault;  //阻止
+                }
+                document.onmouseup=function () {
+                    document.onmousemove=null;
+                    document.onmouseup=null;
+
+                }
+                e.preventDefault();
+            }
+        }
+    </script>
+</head>
+<body>
+<div class="parent">
+    <div class="son"></div>
+</div>
+</body>
+</html>
