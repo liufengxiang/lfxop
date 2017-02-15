@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        //Asynchronous javaScript and XML
+       // 1.获取 xmlhttprequest 对象
+       // new XMLHttpRequest();
+           // 2.ie8 以下的浏览器里面
+           // new ActiveXObject("Microsoft.XMLHTTP");//参数
+        //兼容性这样写最好  因为大部分浏览器都是IE8以上，把他写到前面
+        window.XMLHttpRequest?new XMLHttpRequest():new ActiveXObject("Microsoft.XMLHTTP");
+        /*
+        *   同源策略    不知道
+        *   单线程异步机制
+        *       异步(所有不能够即时完成的动作，都是异步的)
+        *       eg:setTimeout(function(){
+        *           consolo.log
+        *       })LFXfdgg0691
+        *           1.时间控制的 setTimeout  setInterval
+        *           2.事件控制的 window.onload   onclick
+        *    颗粒化    ajax
+        *    1.如何通过ajax获取信息
+        *    wamp window apach阿帕奇   mysql   php 一个平台
+        *    lamp   linux
+        *       协议
+        *       ftp://本地上传协议
+        *       https://更安全的协议
+        *       svn://
+        *       http://标准
+         */
+
+         //事件监控 就如window.onload=function(）
+        xmlobj.onreadystatechange=function () {
+            if(xmlobj.readyState==4){
+                if (xmlobj.status==200){
+                    console.log(xmlobj.response);
+                }
+            }
+        }
+        //取值：方式、页面、(true异步false(同步))、后面是帐号和密码 共5个参数
+        xmlobj.open("get","yemian.html",true)
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

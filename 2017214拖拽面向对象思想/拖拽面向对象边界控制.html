@@ -9,8 +9,8 @@
 
 
     .parent{
-        width: 400px;
-        height: 400px;
+        width: 1000px;
+        height: 1000px;
         border:1px solid #000;
         position: relative;
         left: 0;top:0;
@@ -93,7 +93,7 @@
         },
         animate:function(){
             var t=setInterval(()=>{
-                this.lenx*=this.yizi;
+            var yizi=0.6;
             this.leny*=this.yizi;
             var x=this.lenx+this.obj.offsetLeft;
             var y=this.leny+this.obj.offsetTop;
@@ -122,6 +122,6 @@
         }
     }
     var son=document.querySelector(".son");
-    new drag({ele:son,rect:{minx:0,maxx:400,miny:0,maxy:400},dir:{x:true,y:true}})
+    new drag({ele:son,rect:{minx:0,maxx:1000,miny:0,maxy:1000},dir:{x:true,y:true}})
 </script>
 </html>
