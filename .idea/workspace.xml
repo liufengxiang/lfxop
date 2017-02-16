@@ -2,18 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="58b6f413-a596-4123-9794-4aaace33b12e" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/2017215ajax/ajax.html" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/2017214/2.14" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/2.15" afterPath="$PROJECT_DIR$/2.15" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/2.14-master/README.md" afterPath="$PROJECT_DIR$/2017214拖拽面向对象思想/2.14-master/README.md" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/2.14-master/tuozhuai.html" afterPath="$PROJECT_DIR$/2017214拖拽面向对象思想/2.14-master/tuozhuai.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/2.14-master/tuozhuai_1/拖拽普通过程化.html" afterPath="$PROJECT_DIR$/2017214拖拽面向对象思想/2.14-master/tuozhuai_1/拖拽普通过程化.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/2.14-master/tuozhuai_1/拖拽面向对象.html" afterPath="$PROJECT_DIR$/2017214拖拽面向对象思想/2.14-master/tuozhuai_1/拖拽面向对象.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/2.14-master/tuozhuai_1/拖拽面向对象边界控制.html" afterPath="$PROJECT_DIR$/2017214拖拽面向对象思想/2.14-master/tuozhuai_1/拖拽面向对象边界控制.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/2017214/tuozhuai.html" afterPath="$PROJECT_DIR$/2017214拖拽面向对象思想/tuozhuai.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/2017214/拖拽普通过程化.html" afterPath="$PROJECT_DIR$/2017214拖拽面向对象思想/拖拽普通过程化.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/2017214/拖拽面向对象.html" afterPath="$PROJECT_DIR$/2017214拖拽面向对象思想/拖拽面向对象.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/2017214/拖拽面向对象边界控制.html" afterPath="$PROJECT_DIR$/2017214拖拽面向对象思想/拖拽面向对象边界控制.html" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -103,8 +93,8 @@
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds">
-    <option name="x" value="182" />
-    <option name="y" value="18" />
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
     <option name="width" value="1616" />
     <option name="height" value="876" />
   </component>
@@ -147,24 +137,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="2.15" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="w1610php" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="w1610php" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="2.15" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ajax" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
@@ -313,12 +285,12 @@
       <workItem from="1487083142711" duration="2626000" />
       <workItem from="1487118455629" duration="7875000" />
       <workItem from="1487139086700" duration="2563000" />
-      <workItem from="1487158450327" duration="124000" />
+      <workItem from="1487158450327" duration="441000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="81345000" />
+    <option name="totallyTimeSpent" value="81662000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -330,16 +302,16 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="182" y="18" width="1616" height="876" extended-state="0" />
+    <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
     <editor active="false" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23714653" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23714653" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32972974" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32960895" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32960895" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32960895" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
